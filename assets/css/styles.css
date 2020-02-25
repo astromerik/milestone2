@@ -1,0 +1,42 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: gray;
+}
+
+p {
+    color: whitesmoke;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroimage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.fa-dot-circle {
+    color: rgb(231, 231, 231);
+    display: inline-block;
+    margin: 20px;
+}
+
+.hero-text {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.front-comment img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.get-started {
+    text-align: center;
+    padding-bottom: 100px;
+}

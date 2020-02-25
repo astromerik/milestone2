@@ -3,11 +3,16 @@ body {
     background-color: gray;
 }
 
+h1 {
+    padding-top: 100px;
+}
+
 p {
     color: whitesmoke;
 }
 
 .hero-image {
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroimage.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -22,15 +27,14 @@ p {
 }
 
 .hero-text {
-    color: whitesmoke;
+    color: rgb(231, 231, 231);
     text-align: center;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .front-comment img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 50%;
     margin-top: 150px;
     margin-bottom: 20px;
@@ -38,5 +42,17 @@ p {
 
 .get-started {
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+}
+
+.next-page {
+    margin-left: 50%;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
 }

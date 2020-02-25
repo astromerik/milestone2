@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
 		type="text/css">
-    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-    <title>Success Tracker</title>
+	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+	<title>Success Tracker</title>
 </head>
+
 <body>
 
-<!--Navbar button-->
-    
-<!--=========== Home Page ============-->
-<div class="contianer-fluid">
-    <div class="hero-image">
-    <ul class="nav justify-content-end">
-        <li>
-            <a href="#">
-                <i class="far fa-dot-circle fa-3x"></i>
-            </a>
-        </li>
-    </ul>
-        <div class="hero-text">
-            <h1>Track your favourite stocks...</h1>
-            <div class="row justify-content-around">
-                <div class="col-4 front-comment">
-                    <img src="assets/images/happyman.jpg" alt="Happy man">
-                    <p>"Thanks to Success Tracker® I can now spend more time with my kids,</br> and still make money!" - Carl</p>
-                </div>
-                <div class="col-4 front-comment">
-                    <img src="assets/images/happygirl.jpg" alt="Happy girl">
-                    <p>"Success Tracker® makes my life easier since I don't need to sit in </br>front of the cumputer all day to follow my assets" - Jennifer</p>
-                </div>
-            </div>
-        </div>
-        <div class="get-started">
-            <a class="btn btn-success" href="#" role="button">Get started today!</a>
-        </div>
-    </div>
-    </div>
+	<!--Navbar button-->
+    <nav class="navbar navbar-fixed-top bg-transparent pull-right">
+        <a class="navbar-brand" href="#">
+            <ul class="nav mr-auto">
+                <li>
+                    <a href="#">
+                        <i class="far fa-dot-circle fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+        </a>
+    </nav>
+	<!--=========== Home Page ============-->
+	<div class="contianer-fluid">
+		<div class="hero-image">
+			<div class="hero-text">
+				<h1>Track your favourite stocks...</h1>
+				<div class="row justify-content-around">
+					<div class="col-4 front-comment">
+						<img src="assets/images/happyman.jpg" alt="Happy man">
+						<p>"Thanks to Success Tracker® I can now spend more time with my kids... and still make
+							money!" - Carl</p>
+					</div>
+					<div class="col-4 front-comment">
+						<img src="assets/images/happygirl.jpg" alt="Happy girl">
+						<p>"Success Tracker® makes my life easier since I don't need to sit in front of the
+							cumputer all day to follow my assets" - Jennifer</p>
+					</div>
+				</div>
+			</div>
+			<div class="get-started">
+				<a class="btn btn-success" href="#" role="button">Get started today!</a>
+			</div>
+			<div class="next-page">
+				<i class="fas fa-angle-double-down fa-3x"></i>
+			</div>
+		</div>
+	</div>
+
+    <!--Application page - Success Tracker -->
+    <button onclick="writeToDocument('https://rapidapi.com/apidojo/api/yahoo-finance1')">Get data</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
 </body>
 <script src="assets/js/script.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.slim.js"
-  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-  crossorigin="anonymous"></script>
 </html>

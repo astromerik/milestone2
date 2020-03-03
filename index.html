@@ -11,6 +11,7 @@
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 	<title>Success Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 
 <body>
@@ -56,22 +57,11 @@
 
 	<!--Application page - Success Tracker -->
 
-	<div class="order-depth"></div>
-    <div class="chart"></div>
-    <div class="news"></div>
-    <div class="twitter"></div>
+    <input type="text" id="search" placeholder="Search stock...">
+    <button type="button" onclick="search()">Search</button>
+    
+    <canvas id="chart" width="400px" height="400px"></canvas>
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Choose asset
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Alphabet Inc</a>
-            <a class="dropdown-item" href="#">Apple Inc</a>
-            <a class="dropdown-item" href="#">Facebook Inc</a>
-            <a class="dropdown-item" href="#"></a>
-        </div>
-    </div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

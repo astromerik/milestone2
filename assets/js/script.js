@@ -1,4 +1,4 @@
-// connection to the api and JSON parse data
+// connection to the api and JSON parse data 
 
 const ENDPOINT = "https://www.quandl.com/api/v3/datasets/WIKI/";
 const KEY = "/data.json?api_key=Yb1WqRaFvoKardzS_a3V";
@@ -9,7 +9,7 @@ function getData(type, cb) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             cb(JSON.parse(this.responseText));
-        }
+        } 
     };
 
     xhr.open("GET", ENDPOINT + type + KEY);
@@ -24,12 +24,20 @@ function searchStock(type) {
         data = data.dataset_data.data
         data.forEach(function (item) { 
             console.log(item[0] + " " + item[4]);
+        
+            //pushes the specific arrays from the searchStock function to the arrays used in graph 
+            var date = item[0];
+            dates.push(date);
+            var price = item[4];
+            stockprices.push(price);
         })
     })
 }
 
 var dates = [];
+console.log(dates);
 var stockprices = [];
+console.log(stockprices);
 
 var input = document.getElementById('search').value; //need to change to be a changable variable depending on input
 

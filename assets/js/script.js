@@ -1,39 +1,43 @@
-// $(document).ready(function(){
+const ENDPOINT = "https://www.quandl.com/api/v3/datasets/WIKI/";
+const KEY = "/data.json?api_key=Yb1WqRaFvoKardzS_a3V";
 
-    let xhr = new XMLHttpRequest();
-
-function search(){
-
-    let inputValue = document.getElementById("search").value;
+function getData(type, cb){
+    var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            data = JSON.parse(this.responseText);
-        }};
+            cb(JSON.parse(this.responseText));
+        }
+    };
 
-    xhr.open("GET", "https://www.quandl.com/api/v3/datasets/WIKI/" + inputValue + "/data.json?api_key=Yb1WqRaFvoKardzS_a3V");
+    xhr.open("GET", ENDPOINT + type + KEY);
     xhr.send();
-
-    setTimeout(function(){
-        console.log(data);
-    }, 1000);
-
 }
-    
 
 
 
+function searchStock(type) {
+    let el = document.getElementById("data")
+    el.innerHTML = "";
+    getData(type, function(data) {
+        
+        data = data.dataset_data.data
+        data.forEach(function(item){
+            el.innerHTML += item[0] + item[4];
+        })        
+    })
+}
 
+const y = item[4]
+const x = item[0]
 
-
-
-// Below is the displayed chart - from Chart.js using inspiration from "The Code Train (youtube)"
+// Below is the displayed chart - from Chart.js
 
 // const ctx = document.getElementById('chart').getContext('2d');
 // const xlabels = [];
 // const ytemps = [];
 // const myChart = new Chart(ctx, {
-//     type: 'line',
+//     type: 'bar',
 //     data: {
 //         labels: xlabels,
 //         datasets: [

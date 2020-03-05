@@ -16,34 +16,11 @@ function getData(type, cb) {
     xhr.send();
 }
 
-// search function and loop to get the stock price and date for a specific stock 
-
-function searchStock(type) {
-    var type = document.getElementById('search').value;
-    getData(type, function (data) {
-        data = data.dataset_data.data
-        data.forEach(function (item) { 
-            console.log(item[0] + " " + item[4]);
-        
-            //pushes the specific arrays from the searchStock function to the arrays used in graph 
-            var date = item[0];
-            dates.push(date);
-            var price = item[4];
-            stockprices.push(price);
-        })
-    })
-}
-
-var dates = [];
-console.log(dates);
-var stockprices = [];
-console.log(stockprices);
-
-var input = document.getElementById('search').value; //need to change to be a changable variable depending on input
+function createChart(dates, stockprices){
 
 // Below is the displayed chart - from Chart.js
 
-var ctx = document.getElementById('chart').getContext('2d');
+var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -62,6 +39,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+        responsive: true,
         scales: {
             yAxes: [{
                 ticks: {
@@ -71,6 +49,35 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+}
+// search function and loop to get the stock price and date for a specific stock 
+
+function searchStock(type) {
+    var type = document.getElementById('search').value;
+    getData(type, function (data) {
+        data = data.dataset_data.data
+        data.forEach(function (item) { 
+            // console.log(item[0] + " " + item[4]);
+        
+            //pushes the specific arrays from the searchStock function to the arrays used in graph 
+            var date = item[0];
+            dates.push(date);
+            var price = item[4];
+            stockprices.push(price);
+        })
+    })
+    createChart(dates, stockprices);
+}
+
+var dates = [];
+console.log(dates);
+var stockprices = [];
+console.log(stockprices);
+
+var input = 'Facebook'; //need to change to be a changable variable depending on input
+
+
 
 
     // $.getJSON("https://www.quandl.com/api/v3/datasets/NASDAQOMX/NDX.json?api_key=Yb1WqRaFvoKardzS_a3V", function(nasdaq){

@@ -11,7 +11,7 @@
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 	<title>Success Tracker</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 
 <body>
@@ -56,11 +56,17 @@
 	</div>
 
 	<!--Application page - Success Tracker -->
-
-    <input type="text" id="search" placeholder="Search stock...">
-    <button type="button" onclick="search()">Search</button>
     
-    <canvas id="chart" width="400px" height="400px"></canvas>
+    <!--Chart-->
+	<canvas id="chart" width="400px" height="200px"></canvas>
+
+	<input type="text" id="search" placeholder="Search stock...">
+	<button type="button" onclick="searchStock()">Search</button>
+
+
+
+
+	
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"

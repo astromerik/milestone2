@@ -14,8 +14,6 @@ function getData(type, cb){
     xhr.send();
 }
 
-
-
 function searchStock(type) {
     let el = document.getElementById("data")
     el.innerHTML = "";
@@ -28,39 +26,41 @@ function searchStock(type) {
     })
 }
 
-const y = item[4]
-const x = item[0]
+let input = "Facebook"; //need to change to be a changable variable depending on input
+
+// const y = item[4]
+// const x = item[0]
 
 // Below is the displayed chart - from Chart.js
 
-// const ctx = document.getElementById('chart').getContext('2d');
-// const xlabels = [];
-// const ytemps = [];
-// const myChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels: xlabels,
-//         datasets: [
-//             {
-//             label: 'Price',
-//             data: [12, 19, 3, 5, 2, 3],
-//             backgroundColor: [
-//                 'rgba(255, 99, 132, 0.2)',],
-//             borderColor: [
-//                 'rgba(255, 99, 132, 1)',],
-//             borderWidth: 1
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 }
-//             }]
-//         }
-//     }
-// });
+var ctx = document.getElementById('chart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], //change the data to date
+        datasets: [{
+            lineTension: 0,
+            label: input + ' stock price',
+            data: [12, 19, 3, 5, 2, 3], //change the data to stock prices
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: { 
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true 
+                }
+            }]
+        }
+    }
+});
 
 
 

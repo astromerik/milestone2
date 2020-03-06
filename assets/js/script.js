@@ -9,71 +9,68 @@ function getData(type, cb) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             cb(JSON.parse(this.responseText));
-        } 
+        }
     };
 
     xhr.open("GET", ENDPOINT + type + KEY);
     xhr.send();
 }
 
-function createChart(dates, stockprices){
+var chart;
+function createChart(dates, stockprices) {
 
-// Below is the displayed chart - from Chart.js
-
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: dates, //change the data to date (item[0])
-        datasets: [{
-            lineTension: 0,
-            label: input + ' stock price',
-            data: stockprices, //change the data to stock prices (item[4])
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
+    // Below is the displayed chart - from Chart.js
+    
+    var ctx = document.getElementById('myChart');
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dates, //change the data to date (item[0])
+            datasets: [{
+                lineTension: 0,
+                label: input + ' stock price',
+                data: stockprices, //change the data to stock prices (item[4])
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
             }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
         }
-    }
-});
-
+    });
 }
-// search function and loop to get the stock price and date for a specific stock 
+
+
+// search function and loop to get the stock price and date for a specific stock (user input)
 
 function searchStock(type) {
+    let = dates = [];
+    let = stockprices = [];
     var type = document.getElementById('search').value;
     getData(type, function (data) {
-        data = data.dataset_data.data
-        data.forEach(function (item) { 
-            // console.log(item[0] + " " + item[4]);
-        
+        data = data.dataset_data.data.reverse(); //We need to reverse the array in order for the graph to display properly 
+        data.forEach(function (item) {
+
             //pushes the specific arrays from the searchStock function to the arrays used in graph 
-            var date = item[0];
-            dates.push(date);
-            var price = item[4];
-            stockprices.push(price);
-        })
-    })
-    createChart(dates, stockprices);
+            dates.push(item[0]);
+            stockprices.push(item[4]);
+        });
+        createChart(dates, stockprices);
+    });
 }
 
-var dates = [];
-console.log(dates);
-var stockprices = [];
-console.log(stockprices);
 
 var input = 'Facebook'; //need to change to be a changable variable depending on input
 

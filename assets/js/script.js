@@ -21,6 +21,10 @@ function createChart(dates, stockprices) {
 
     // Below is the displayed chart - from Chart.js
     
+    if(chart){
+        chart.destroy();
+    }
+
     var ctx = document.getElementById('myChart');
     chart = new Chart(ctx, {
         type: 'line',
@@ -31,16 +35,16 @@ function createChart(dates, stockprices) {
                 label: input + ' stock price',
                 data: stockprices, //change the data to stock prices (item[4])
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(29, 118, 242, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(0, 87, 209)',
                 ],
-                borderWidth: 1
+                borderWidth: 1,
+                radius: 0,
             }]
         },
         options: {
-            responsive: true,
             scales: {
                 yAxes: [{
                     ticks: {
@@ -55,7 +59,7 @@ function createChart(dates, stockprices) {
 
 // search function and loop to get the stock price and date for a specific stock (user input)
 
-function searchStock(type) {
+function searchStock() {
     let = dates = [];
     let = stockprices = [];
     var type = document.getElementById('search').value;

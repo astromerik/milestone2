@@ -1,24 +1,17 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: gray;
+    background-color: rgb(111, 121, 123);
 }
 
 h1 {
     padding-top: 100px;
 }
 
-p {
-    color: whitesmoke;
+h3 {
+    text-align: center;
 }
 
-.hero-image {
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroimage.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+/* Navbar */
 
 .fa-dot-circle {
     color: rgb(231, 231, 231);
@@ -26,10 +19,32 @@ p {
     margin: 20px;
 }
 
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Home page */
+
+.hero-image {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroimage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .hero-text {
     color: rgb(231, 231, 231);
     text-align: center;
     margin-bottom: 50px;
+}
+
+.front-comment {
+    margin-bottom: 25vh;
 }
 
 .front-comment img {
@@ -46,12 +61,30 @@ p {
     padding-bottom: 50px;
 }
 
+.next-page {
+    padding-bottom: 50px;
+}
+
+/* Application page */
+
+#myChart {
+    margin-top: 100px;
+    border: 1px solid black;
+}
 
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+/* About section */
 
+#about-container {
+    margin-top: 100px;
+}
+
+
+.card-deck {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card {
+    padding: 0px;
 }

@@ -38,7 +38,7 @@ function createChart(dates, stockprices) {
                     'rgba(29, 118, 242, 0.2)',
                 ],
                 borderColor: [
-                    'rgba(0, 87, 209)',
+                    'rgba(0, 0, 0)',
                 ],
                 borderWidth: 1,
                 radius: 0,

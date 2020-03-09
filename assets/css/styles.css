@@ -1,19 +1,34 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(111, 121, 123);
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h1 {
-    padding-top: 100px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'IM Fell French Canon SC', serif;
 }
 
-h3 {
+h2, h3 {
+    padding-top: 50px;
     text-align: center;
 }
 
+h6 {
+    padding-top: 20px;
+    text-align: center;
+}
 /* Navbar */
 
-.fa-dot-circle {
+/* .fa-dot-circle {
     color: rgb(231, 231, 231);
     display: inline-block;
     margin: 20px;
@@ -24,27 +39,28 @@ h3 {
     top: 0;
     left: 0;
     z-index: 1;
-}
+} */
 
 /* Home page */
 
+
+
 .hero-image {
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroimage.jpg");
+    height: 350px;
+    background-image: linear-gradient(rgba(175, 206, 230, 0.8), rgba(175, 206, 230, 0.4)), url("../images/heroimage.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 50vh;
 }
 
 .hero-text {
-    color: rgb(231, 231, 231);
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.front-comment {
-    margin-bottom: 25vh;
+.hero-text h3 {
+    color: white;
 }
 
 .front-comment img {
@@ -53,30 +69,57 @@ h3 {
     border-radius: 50%;
     margin-top: 50px;
     margin-bottom: 20px;
-    border: 2px solid gray;
+    border: 2px solid rgb(175, 206, 230);
+}
+
+.front-comment {
+    margin-bottom: 50px;
+}
+
+#laptopimg {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .get-started {
+    margin-top: 30px;
     text-align: center;
     padding-bottom: 50px;
+}
+
+.get-started .btn {
+    background-color: rgb(175, 206, 230);
 }
 
 .next-page {
     padding-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .front-woman {
+        display: none;
+    }
+}
+
 /* Application page */
+
+#app-container {
+    background-color: rgb(175, 206, 230);
+}
 
 #myChart {
     margin-top: 100px;
-    border: 1px solid black;
+    width: 50%;
+    height: 25%;
 }
-
 
 /* About section */
 
 #about-container {
     margin-top: 100px;
+    padding-bottom: 20px;
 }
 
 
@@ -87,4 +130,35 @@ h3 {
 
 .card {
     padding: 0px;
+}
+
+/* @media (max-width: 768px){
+    .card {
+        max-width: 300px;
+    } 
+} */
+
+/* FAQ section */
+
+#faq-container {
+    padding-bottom: 50px;
+    background-color: rgb(175, 206, 230);
+}
+
+#faq-container p {
+    text-align: center;
+}
+
+.btn-link {
+    color: black;
+}
+
+.btn-link:hover {
+    color: rgb(175, 206, 230);
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(175, 206, 230);
 }

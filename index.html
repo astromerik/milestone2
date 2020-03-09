@@ -16,61 +16,126 @@
 
 <body>
 
-	<!--Navbar button-->
-	<nav class="navbar navbar-fixed-top bg-transparent pull-right">
-		<a class="navbar-brand" href="#">
-			<ul class="nav mr-auto">
-				<li>
-					<a href="#">
-						<i class="far fa-dot-circle fa-3x"></i>
-					</a>
-				</li>
-			</ul>
-		</a>
-	</nav>
-	<!--=========== Home Page ============-->
-	<div class="contianer-fluid">
-		<div class="hero-image">
-			<div class="hero-text">
-				<h1>Track your favourite stocks...</h1>
-				<div class="row justify-content-around">
-					<div class="col-4 front-comment">
-						<img src="assets/images/happyman.jpg" alt="Happy man">
-						<p>"Thanks to Success Tracker® I can now spend more time on the golf course... and still make
-							money!" - Carl</p>
-					</div>
-					<div class="col-4 front-comment">
-						<img src="assets/images/happygirl.jpg" alt="Happy girl">
-						<p>"Success Tracker® makes my life easier since I don't need to sit in front of the
-							cumputer all day to follow my assets" - Jennifer</p>
-					</div>
-				</div>
-				<div class="get-started">
-					<a class="btn btn-success" href="#" role="button">Get started today!</a>
-				</div>
-				<div class="next-page">
-					<i class="fas fa-angle-double-down fa-3x"></i>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!--Navbar button-->
+    <nav class="navbar navbar-fixed-top bg-transparent pull-right">
+        <a class="navbar-brand" href="#">
+            <ul class="nav mr-auto">
+                <li>
+                    <a href="#">
+                        <i class="far fa-dot-circle fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+        </a>
+    </nav>
+    <!--=========== Home Page ============-->
+    <div class="contianer-fluid" id="home-container">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Track your favourite stocks...</h1>
+                <div class="row justify-content-around">
+                    <div class="col-4 front-comment">
+                        <img src="assets/images/happyman.jpg" alt="Happy man">
+                        <p>"Thanks to Success Tracker® I can now spend more time on the golf course... and still make
+                            money!" - Carl</p>
+                    </div>
+                    <div class="col-4 front-comment">
+                        <img src="assets/images/happygirl.jpg" alt="Happy girl">
+                        <p>"Success Tracker® makes my life easier since I don't need to sit in front of the
+                            cumputer all day to follow my assets" - Jennifer</p>
+                    </div>
+                </div>
+                <div class="get-started">
+                    <a class="btn btn-success" href="#" role="button">Get started today!</a>
+                </div>
+                <div class="next-page">
+                    <i class="fas fa-angle-double-down fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<!--Application page - Success Tracker -->
-    
-    <!--Chart-->
-	<canvas id="myChart" width="400px" height="200px"></canvas>
+    <!--Application page - Success Tracker -->
 
-	<input type="text" id="search" placeholder="Search stock...">
-	<button type="button" onclick="searchStock()">Search</button>
+    <div class="container-fluid" id="app-container">
+        <h2>Success Tracker®</h2>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                <canvas id="myChart"></canvas>
+                <input type="text" id="search" placeholder="Search stock...">
+                <button type="button" onclick="searchStock()">Search</button>
+            </div>
+            <div class="col-4">
 
+            </div>
+        </div>
+    </div>
 
+    <!-- About section -->
 
-
+    <div class="contianer-fluid" id="about-container">
+        <div class="row justify-content-around">
+            <div class="col-4">
+                <p>Success Tracker® were created for investors, by investors. Through fast APIs, the users receive real
+                    time data and information about the assets of their choice. Be updated without the effort!</p>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <i class="far fa-check-square fa-2x"></i><p>Fast APIs</p>
+                </div>
+                <div class="row">
+                    <i class="far fa-check-square fa-2x"></i><p>Real time updates</p>
+                </div>
+                <div class="row">
+                    <i class="far fa-check-square fa-2x"></i><p>Set your own triggers</p>
+                </div>
+                <div class="row">
+                    <i class="far fa-check-square fa-2x"></i><p>100% Free</p>
+                </div>
+                <div class="row">
+                    <i class="far fa-check-square fa-2x"></i><p> Easy to get started</p>
+                </div>
+            </div>
+        </div>
 	
+        <!--Cards with other users portfolios-->
+        <h3>Top preformers using Success Tracker®</h3>
+        <div class="row card-deck justify-content-around">
+            <div class="card col-3">
+                <img src="assets/images/deer.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">DeerTrader</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32% <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Since 2020-01-01</small></p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <img src="assets/images/owl.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OwlMoneyMaker</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32% <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Last three months</small></p>
+                </div>
+            </div>
+            <div class="card col-3">
+                <img src="assets/images/eagle.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">BullishEagle</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32% <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Last year</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+	<!-- FAQ & Contact section-->
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<div class="container-fluid" id="faq-container">
+		
+    </div>
+
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+					integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 <script src="assets/js/script.js"></script>
 

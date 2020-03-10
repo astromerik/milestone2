@@ -40,6 +40,15 @@ h6 {
 p {
     font-weight: 100;
 }
+
+.separator {
+  bottom: -4px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
 /* Navbar */
 
 .navbar {
@@ -57,8 +66,15 @@ p {
     height: 40px;
 }
 
-@media (max-width: 768px) {
-    .navbar img {
+
+@media (max-width: 991px) {
+    .navbar #bigscreenlogo {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-brand {
         display: none;
     }
 }
@@ -106,7 +122,7 @@ p {
 .get-started {
     margin-top: 30px;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .get-started .btn {
@@ -123,7 +139,10 @@ p {
 }
 
 /* Application page */
-
+#app-container {
+    background-image:linear-gradient(to left bottom, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    min-height: 100vh;
+}
 
 #successImage {
     padding-top: 50px;
@@ -139,9 +158,9 @@ p {
 }
 
 .canvas-chart {
-    border: 2px solid rgba(238, 167, 111);
     padding: 15px;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 #myChart {
@@ -149,12 +168,30 @@ p {
     height: 25%;
 }
 
+.search-function {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.search-function button, .search-function input {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+}
+
+#rocket {
+    max-width: 100px;
+    max-height: 200px;
+}
+
 /* About section */
 
 #about-container {
-    margin-top: 100px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    background-image:linear-gradient(to left top, rgba(208, 51, 78, 1), rgba(238, 167, 111));
+    background-image:linear-gradient(to left top, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    min-height: 100vh;
 }
 
 #about-container i {
@@ -189,8 +226,13 @@ p {
 
 /* FAQ section */
 
+#faq-container {
+    background-image:linear-gradient(to left bottom, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    min-height: 100vh;
+}
+
 .accordion .card{
-    background-color: rgba(238, 167, 111);
+    background-color: rgb(255, 191, 143);
 }
 
 #faq-container {

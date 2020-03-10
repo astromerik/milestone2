@@ -35,7 +35,7 @@ function createChart(dates, stockprices) {
                 label: input + ' stock price',
                 data: stockprices, //change the data to stock prices (item[4])
                 backgroundColor: [
-                    'rgba(238, 167, 111)',
+                    'rgba(255, 255, 255, 0.7)',
                 ],
                 borderColor: [
                     'rgba(0, 0, 0)',
@@ -48,13 +48,18 @@ function createChart(dates, stockprices) {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        fontColor: "black", 
+                        callback: function(value, index, values) {
+                            return value + ' $';
+                        }
                     }
                 }],
                 xAxes: [{
                     ticks: {
                         maxTicksLimit: 10,
-                        beginAtZero: true
+                        beginAtZero: true,
+                        fontColor: "black", 
                     }
                 }]
             }
@@ -82,21 +87,12 @@ function searchStock() {
 }
 
 
-var input = 'Facebook'; //need to change to be a changable variable depending on input
+ //need to change to be a changable variable depending on input
 
 
-
+var input = document.getElementById('search').value;
 
     // $.getJSON("https://www.quandl.com/api/v3/datasets/NASDAQOMX/NDX.json?api_key=Yb1WqRaFvoKardzS_a3V", function(nasdaq){
     //     console.log(nasdaq);
     // });
 // }); 
-
-// 
-
-// *************************** site functionality **************************************
-
-//     $(".fa-dot-circle").click(function(){
-//         alert("hey");
-//     });
-// 

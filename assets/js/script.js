@@ -35,7 +35,7 @@ function createChart(dates, stockprices) {
                 label: input + ' stock price',
                 data: stockprices, //change the data to stock prices (item[4])
                 backgroundColor: [
-                    'rgba(29, 118, 242, 0.2)',
+                    'rgba(238, 167, 111)',
                 ],
                 borderColor: [
                     'rgba(0, 0, 0)',
@@ -48,6 +48,12 @@ function createChart(dates, stockprices) {
             scales: {
                 yAxes: [{
                     ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        maxTicksLimit: 10,
                         beginAtZero: true
                     }
                 }]

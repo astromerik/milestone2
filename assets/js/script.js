@@ -67,6 +67,10 @@ function createChart(dates, stockprices) {
     });
 }
 
+//need to change to be a changable variable depending on input
+
+
+var input = document.getElementById('search').value;
 
 // search function and loop to get the stock price and date for a specific stock (user input)
 
@@ -79,6 +83,7 @@ function searchStock() {
         data.forEach(function (item) {
 
             //pushes the specific arrays from the searchStock function to the arrays used in graph 
+
             dates.push(item[0]);
             stockprices.push(item[4]);
         });
@@ -87,10 +92,9 @@ function searchStock() {
 }
 
 
- //need to change to be a changable variable depending on input
-
-
-var input = document.getElementById('search').value;
+ function removePara(){
+     searchText.removeChild(placeHolderText);
+ }
 
     // $.getJSON("https://www.quandl.com/api/v3/datasets/NASDAQOMX/NDX.json?api_key=Yb1WqRaFvoKardzS_a3V", function(nasdaq){
     //     console.log(nasdaq);

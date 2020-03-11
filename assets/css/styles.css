@@ -41,12 +41,15 @@ p {
     font-weight: 100;
 }
 
-.separator {
-  bottom: -4px;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
+.separator img {
+  margin-right: auto;
+  float: right;
+  z-index: -1;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 /* Navbar */
@@ -83,7 +86,7 @@ p {
 
 
 #home-container {
-    background-image:linear-gradient(to left top, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
     height: 100vh;
     min-height: 740px;
 }
@@ -130,7 +133,6 @@ p {
 }
 
 .next-page {
-    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -140,12 +142,16 @@ p {
 
 /* Application page */
 #app-container {
-    background-image:linear-gradient(to left bottom, rgba(238, 167, 111), rgba(208, 51, 78, 1));
-    min-height: 100vh;
+    background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
+    /* min-height: 100vh; */
+    padding-top: 40px;
+}
+
+#app-container p {
+    text-align: center;
 }
 
 #successImage {
-    padding-top: 50px;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -188,11 +194,15 @@ p {
 /* About section */
 
 #about-container {
-    padding-top: 50px;
+    padding-top: 160px;
     padding-bottom: 20px;
-    background-image:linear-gradient(to left top, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
     min-height: 100vh;
 }
+
+/* #about-container h2 {
+    margin-top: 120px;
+} */
 
 #about-container i {
     margin-right: 20px;
@@ -208,7 +218,6 @@ p {
 
 .about-text {
     text-align: center;
-    padding-top: 50px;
 }
 
 .card-deck {
@@ -218,6 +227,7 @@ p {
 .portfolio-card{
     max-width: 350px;
     padding: 0px;
+    background-color: transparent;
 }
 
 .portfolio-card h5 {
@@ -227,12 +237,18 @@ p {
 /* FAQ section */
 
 #faq-container {
-    background-image:linear-gradient(to left bottom, rgba(238, 167, 111), rgba(208, 51, 78, 1));
-    min-height: 100vh;
+    background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
+    /* min-height: 100vh; */
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
+/* #faq-container h2 {
+    padding-top: 120px;
+} */
+
 .accordion .card{
-    background-color: rgb(255, 191, 143);
+    background-color: transparent;
 }
 
 #faq-container {
@@ -260,5 +276,5 @@ p {
 /* Footer */
 
 footer {
-    background-image:linear-gradient(to left top, rgba(238, 167, 111), rgba(208, 51, 78, 1));
+    background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
 }

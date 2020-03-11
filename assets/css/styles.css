@@ -149,6 +149,7 @@ p {
 
 #app-container p {
     text-align: center;
+    padding-top: 40px;
 }
 
 #successImage {
@@ -264,7 +265,7 @@ p {
 }
 
 .btn-link:hover {
-    color: rgb(208, 51, 78);
+    color: rgba(74,86,222);
 }
 
 .contact-info h5 {

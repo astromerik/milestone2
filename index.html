@@ -108,17 +108,19 @@
 			</div>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 search-function">
-				<input type="text" id="search" placeholder="Search stock...">
-				<button type="button" onclick="searchStock(); removePara()">Search</button>
-			</div>
+			<div class="col-12 search-function">
+                <div class="form-group">
+				<input class="search-function" type="text" id="search" placeholder="Search stock...">
+				<button type="button" onclick="searchStock();">Search</button>
+                </div>
+            </div>
+            <div id="match-list"></div>
 		</div>
-        <!-- <img id="rocket" src="assets/images/rocket.png" alt=""> -->
         <div class="separator">
         <img id="separator-img2" src="assets/images/line.png" alt="">
     </div>
 	</div>
-   
+   <!-- <img id="rocket" src="assets/images/rocket.png" alt=""> -->
 	<!-- About section -->
 
 	<div class="contianer-fluid" id="about-container">

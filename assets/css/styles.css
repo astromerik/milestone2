@@ -44,7 +44,7 @@ p {
 .separator img {
   margin-right: auto;
   float: right;
-  z-index: -1;
+  padding-left: 100%;
 }
 
 .container-fluid {
@@ -176,8 +176,11 @@ p {
 }
 
 .search-function {
-    margin-bottom: 50px;
     text-align: center;
+}
+
+::placeholder {
+    color: black;
 }
 
 .search-function button, .search-function input {
@@ -190,6 +193,20 @@ p {
 #rocket {
     max-width: 100px;
     max-height: 200px;
+}
+
+.search-card {
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.search-card :hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.text-primary {
+    color: white !important;
 }
 
 /* About section */

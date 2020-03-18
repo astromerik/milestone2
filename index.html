@@ -20,14 +20,14 @@
 
 	<div class="contianer-fluid" id="home-container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-center">
-        <a class="navbar-brand" href="#">
-    <img src="assets/images/logo.png" width="30" height="30" alt="">
-  </a>
+			<a class="navbar-brand" href="#">
+				<img src="assets/images/logo.png" width="30" height="30" alt="">
+            </a>
 			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-			<div class="collapse navbar-collapse justify-content-center text-center" id="navbarTogglerDemo02">
-				<ul class="navbar-nav">
+				<div class="collapse navbar-collapse justify-content-center text-center" id="navbarTogglerDemo02">
+					<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link" href="#home-container">Home <span class="sr-only">(current)</span></a>
 					</li>
@@ -37,12 +37,12 @@
 					<a>
 						<img id="bigscreenlogo" src="assets/images/logo.png" href="#home-container">
                     </a>
-						<li class="nav-item">
-							<a class="nav-link" href="#about-container">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#faq-container">Contact</a>
-						</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about-container">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#faq-container">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -92,226 +92,294 @@
 		<div class="next-page">
 			<i class="fas fa-chevron-down fa-3x"></i>
 		</div>
-        <div class="separator">
-        <img id="separator-img" src="assets/images/line.png" alt="">
-    </div>
-	</div>
-    
-	<!--Application page - Success Tracker -->
-
-	<div class="container-fluid" id="app-container">
-		<img src="assets/images/logo.png" id="successImage" href="#">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 canvas-chart searchText">
-				<canvas id="myChart"></canvas>
-                <p class="placeHolderText">Search for a stock's ticker to run application</p>
+		<div class="row">
+			<div class="col-sm-12 separator">
+				<img id="separator-img" src="assets/images/line.png" alt="">
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="col-12 search-function">
-                <div class="form-group">
-				<input class="search-function" type="text" id="search" placeholder="Search stock...">
-				<button type="button" onclick="searchStock();">Search</button>
+	</div>
+
+		<!--Application page - Success Tracker -->
+
+    <div class="container-fluid" id="app-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="assets/images/logo.png" id="successImage" href="#">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 canvas-chart searchText">
+                <canvas id="myChart"></canvas>
+                <p class="placeHolderText">Search for a stock's ticker to run application</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-12 search-function">
+                    <div class="form-group">
+                        <input class="search-function" type="text" id="search" placeholder="Search stock...">
+                    </div>
+                </div>
+                <div id="match-list"></div>
+            </div>
+            <div class="separator">
+                <img id="separator-img2" src="assets/images/line.png" alt="">
+            </div>
+        </div>
+        <!-- <img id="rocket" src="assets/images/rocket.png" alt=""> -->
+            <!-- About section -->
+
+    <div class="contianer-fluid" id="about-container">
+        <h2>About</h2>
+        <div class="row justify-content-around">
+            <div class="col-12 col-lg-4 about-text">
+                <p>Success Tracker® were created for investors, by investors. Through fast APIs, the
+                    users
+                    receive
+                    real
+                    time data and information about the assets of their choice. Be updated without the
+                    effort!
+                </p>
+            </div>
+        </div>
+
+        <!--Cards with other users portfolios-->
+        <h3>Top preformers using Success Tracker®</h3>
+        <div class="row card-deck justify-content-around">
+            <div class="card portfolio-card col-8 col-md-12"> 
+                <img src="assets/images/deer.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">DeerTrader</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
+                    <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Since 2020-01-01</small></p>
                 </div>
             </div>
-            <div id="match-list"></div>
-		</div>
+            <div class="card portfolio-card col-8 col-xl-6">
+                <img src="assets/images/owl.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OwlMoneyMaker</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
+                    <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Last three months</small></p>
+                </div>
+            </div>
+            <div class="card portfolio-card col-8 col-sm-6">
+                <img src="assets/images/eagle.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">BullishEagle</h5>
+                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
+                    <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text"><small class="text-muted">Last year</small></p>
+                </div>
+            </div>
+        </div>
         <div class="separator">
-        <img id="separator-img2" src="assets/images/line.png" alt="">
+            <img id="separator-img3" src="assets/images/line.png" alt="">
+        </div>
     </div>
-	</div>
-   <!-- <img id="rocket" src="assets/images/rocket.png" alt=""> -->
-	<!-- About section -->
+						<!-- FAQ & Contact section-->
 
-	<div class="contianer-fluid" id="about-container">
-		<h2>About</h2>
-		<div class="row justify-content-around">
-			<div class="col-12 col-lg-4 about-text">
-				<p>Success Tracker® were created for investors, by investors. Through fast APIs, the users receive
-					real
-					time data and information about the assets of their choice. Be updated without the effort!</p>
-			</div>
-		</div>
-        
-		<!--Cards with other users portfolios-->
-		<h3>Top preformers using Success Tracker®</h3>
-		<div class="row card-deck justify-content-around">
-			<div class="card portfolio-card col-8 col-md-12">
-				<img src="assets/images/deer.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">DeerTrader</h5>
-					<p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
-						<br> Bear: Lehman Brothers B -100% </p>
-						<p class="card-text"><small class="text-muted">Since 2020-01-01</small></p>
-				</div>
-			</div>
-			<div class="card portfolio-card col-8 col-xl-6">
-				<img src="assets/images/owl.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">OwlMoneyMaker</h5>
-					<p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
-						<br> Bear: Lehman Brothers B -100% </p>
-						<p class="card-text"><small class="text-muted">Last three months</small></p>
-				</div>
-			</div>
-			<div class="card portfolio-card col-8 col-sm-6">
-				<img src="assets/images/eagle.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">BullishEagle</h5>
-					<p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
-						<br> Bear: Lehman Brothers B -100% </p>
-						<p class="card-text"><small class="text-muted">Last year</small></p>
-				</div>
-			</div>
-		</div>
-        <div class="separator">
-        <img id="separator-img3" src="assets/images/line.png" alt="">
-    </div>
-	</div>
-	<!-- FAQ & Contact section-->
-
-	<div class="container-fluid" id="faq-container">
+    <div class="container-fluid" id="faq-container">
         <h2>Contact us!</h2>
-		<div class="row">
-			<div class="col-12 col-md-6">
-				<h3>FAQ</h3>
-				<div class="accordion" id="accordionExample">
-					<div class="card">
-						<div class="card-header" id="headingOne">
-							<p class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        I do not get the notifications I asked for, what is wrong? 
-                        </button>
-							</p>
-						</div>
-						<div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-							data-parent="#accordionExample">
-							<div class="card-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h3>FAQ</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <p class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    I do not get the notifications I asked for, what is wrong? 
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+								terry
 								richardson ad squid.
-								3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+								3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+								Food
+								truck
+								quinoa
 								nesciunt
-								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+								on it
+								squid
 								single-origin
-								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+								craft
+								beer
 								labore wes
-								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+								butcher
+								vice
+								lomo.
 								Leggings
-								occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+								occaecat craft beer farm-to-table, raw denim aesthetic synth
+								nesciunt
+								you
+								probably
 								haven't heard
 								of them accusamus labore sustainable VHS.
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingTwo">
-							<p class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        I cannot access my account, why?
-                        </button>
-							</p>
-						</div>
-						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-							data-parent="#accordionExample">
-							<div class="card-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-								richardson ad squid.
-								3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-								nesciunt
-								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-								single-origin
-								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-								labore wes
-								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-								Leggings
-								occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-								haven't heard
-								of them accusamus labore sustainable VHS.
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingThree">
-							<p class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        I wish to add a commodity but I cannot find it, why?
-                        </button>
-							</p>
-						</div>
-						<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-							data-parent="#accordionExample">
-							<div class="card-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-								richardson ad squid.
-								3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-								nesciunt
-								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-								single-origin
-								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-								labore wes
-								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-								Leggings
-								occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-								haven't heard
-								of them accusamus labore sustainable VHS.
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingFour">
-							<p class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                        How do I turn of my notifications?
-                        </button>
-							</p>
-						</div>
-						<div id="collapseFour" class="collapse" aria-labelledby="headingTwo"
-							data-parent="#accordionExample">
-							<div class="card-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-								richardson ad squid.
-								3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-								nesciunt
-								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-								single-origin
-								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
-								labore wes
-								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-								Leggings
-								occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-								haven't heard
-								of them accusamus labore sustainable VHS.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-md-6 contact-info">
-				<h3>Contact us!</h3>
-				<h5>Email: info@successtracker.com</h5>
-				<h5>Phone number: 555 - 534 57 53</h5>
-				<h5>Opening hours: 08:30 - 17:00 Mon-Fri</h5>
-			</div>
-		</div>
-	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <p class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                I cannot access my account, why?
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry
+                                richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                Food
+                                truck
+                                quinoa
+                                nesciunt
+                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it
+                                squid
+                                single-origin
+                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                                craft
+                                beer
+                                labore wes
+                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                butcher
+                                vice
+                                lomo.
+                                Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you
+                                probably
+                                haven't heard
+                                of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <p class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                I wish to add a commodity but I cannot find it, why?
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry
+                                richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                Food
+                                truck
+                                quinoa
+                                nesciunt
+                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it
+                                squid
+                                single-origin
+                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                                craft
+                                beer
+                                labore wes
+                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                butcher
+                                vice
+                                lomo.
+                                Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you
+                                probably
+                                haven't heard
+                                of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <p class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                How do I turn of my notifications?
+                                </button>
+                            </p>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry
+                                richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                Food
+                                truck
+                                quinoa
+                                nesciunt
+                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it
+                                squid
+                                single-origin
+                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                                craft
+                                beer
+                                labore wes
+                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                                butcher
+                                vice
+                                lomo.
+                                Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth
+                                nesciunt
+                                you
+                                probably
+                                haven't heard
+                                of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 contact-info">
+                <h3>Contact us!</h3>
+                <h5>Email: info@successtracker.com</h5>
+                <h5>Phone number: 555 - 534 57 53</h5>
+                <h5>Opening hours: 08:30 - 17:00 Mon-Fri</h5>
+            </div>
+        </div>
+    </div>
 
-	<footer>
-		<div class="row">
-			<div class="col-md-12">
-				<i class="fab fa-twitter fa-2x"></i>
-			</div>
-		</div>
-	</footer>
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <i class="fab fa-twitter fa-2x"></i>
+            </div>
+        </div>
+    </footer>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous">
+    </script>
 </body>
 <script src="assets/js/script.js"></script>
 

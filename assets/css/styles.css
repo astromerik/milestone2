@@ -41,6 +41,10 @@ p {
     font-weight: 100;
 }
 
+.separator {
+    padding-right: 0;
+}
+
 .separator img {
   margin-right: auto;
   float: right;
@@ -87,7 +91,6 @@ p {
 
 #home-container {
     background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
-    height: 100vh;
     min-height: 740px;
 }
 
@@ -143,7 +146,6 @@ p {
 /* Application page */
 #app-container {
     background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
-    /* min-height: 100vh; */
     padding-top: 40px;
 }
 
@@ -200,7 +202,8 @@ p {
     border: 2px solid black;
 }
 
-.search-card :hover {
+
+#match-list :hover {
     background-color: orange;
     cursor: pointer;
 }
@@ -215,7 +218,6 @@ p {
     padding-top: 160px;
     padding-bottom: 20px;
     background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
-    min-height: 100vh;
 }
 
 /* #about-container h2 {
@@ -256,7 +258,6 @@ p {
 
 #faq-container {
     background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
-    /* min-height: 100vh; */
     padding-top: 40px;
     padding-bottom: 20px;
 }

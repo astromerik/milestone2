@@ -107,13 +107,31 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 canvas-chart searchText">
-                <canvas id="myChart"></canvas>
+                    <canvas id="myChart"></canvas>
                 <img src="assets/images/loader.gif" id="loader" alt="loading">
-                <p class="placeHolderText">Search for a stock's ticker to run application</p>
+            </div>
+            <div class="col-12 col-md-3 stock-info">
+                <div class="info-box">
+                    <h6 id="info-box1">Last day of trading</h6>
+                    <p id="date"></p>
+                </div>
+                <div class="info-box">
+                    <h6 id="info-box2">Highest Price</h6>
+                    <p id="highest-price"></p>
+                </div>
+                <div class="info-box">
+                <h6 id="info-box3">Lowest Price</h6>
+                    <p id="lowest-price"></p>
+                </div>
+                <div class="info-box">
+                    <h6 id="info-box4">Closing Price</h6>
+                    <p id="closing-price"></p>
+                </div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 search-function">
+            <p class="placeHolderText">Search for a company or a stock ticker to run application</p>
                 <div class="form-group">
                     <input class="search-function" type="text" id="search" placeholder="Search stock...">
                 </div>

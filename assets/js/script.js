@@ -48,7 +48,8 @@ function createChart(dates, stockprices, companyName) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        fontColor: "black", 
+                        fontColor: "black",
+                        maxTicksLimit: 5, 
                         callback: function(value) {
                             return value + ' $';
                         }
@@ -72,35 +73,48 @@ function createChart(dates, stockprices, companyName) {
 function searchStock(ticker, companyName) {
     let dates = [];
     let stockprices = [];
+    let priceHigh = [];
+    let priceLow = [];
+    let priceClose = [];
+    let lastDay = [];
     getData(ticker, function (data) {
         data = data.dataset_data.data.reverse(); //Array is reversed in order for the graph to display correctly  
-
+        
         //pushes the specific arrays from the searchStock function to the arrays used in graph 
+        lastDay.push(data[data.length - 1][0]);
+        priceHigh.push(data[data.length - 1][2]);
+        priceLow.push(data[data.length - 1][3]);
+        priceClose.push(data[data.length - 1][4]);
 
         data.forEach(function (item) {
             dates.push(item[0]);
             stockprices.push(item[4]);
         });
         createChart(dates, stockprices, companyName);
+        $('#highest-price').text(priceHigh);
+        $('#lowest-price').text(priceLow);
+        $('#closing-price').text(priceClose);
+        $('#date').text(lastDay);
     });
 }
+
 
 //Below is a array inserted with pairings of tickers and company names using the added ticker.json file --> Inspiration from Traversy Media @ youtube
 
 
-const search = document.getElementById('search');
-const matchList = document.getElementById('match-list');
+let search = document.getElementById('search');
+let matchList = document.getElementById('match-list');
 
 // search the ticker.json and use the input to filter 
 
-const searchJSON = async searchText => {
-    const res = await fetch('assets/data/ticker.json');
-    const ticker = await res.json();
+let searchJSON = async function(searchText) {
+    let res = await fetch('assets/data/ticker.json');
+    let ticker = await res.json();
     
 // get matches to current text input 
 
-let matches = ticker.filter(stock => {
-    const regex = new RegExp(`^${searchText}`, 'gi');
+let matches = ticker.filter(function (stock) {
+    let regex = new RegExp(`^${searchText}`, 'gi');
     return stock.company.match(regex) || stock.ticker.match(regex);
 });
 
@@ -113,9 +127,9 @@ if(searchText.length === 0) {
 
 // show search results in html
 
-const outputHtml = matches => {
+let outputHtml = function(matches) {
     if(matches.length > 0) {
-        const html = matches.map(match => `
+        let html = matches.map(match => `
             <div class="card card-body mb-4 search-card" id="card-body" onclick="searchStock('${match.ticker}','${match.company}')">
                 <h4><span class="text-primary">${match.company}</span> (${match.ticker})</h4>
             </div>
@@ -124,21 +138,21 @@ const outputHtml = matches => {
     }
 };
 
-search.addEventListener('input', () => searchJSON(search.value));
+search.addEventListener('input', function() {
+    searchJSON(search.value)
+});
 
 // gif shows when loading graph
 
 $('#loader').hide();
+$('#info-box1').hide();
+$('#info-box2').hide();
+$('#info-box3').hide();
+$('#info-box4').hide();
 $('#match-list').click(function(){
     $('#loader').show();
+    $('#info-box1').show();
+    $('#info-box2').show();
+    $('#info-box3').show();
+    $('#info-box4').show();
 });
-    
-
-
-
-//  }
-
-    // $.getJSON("https://www.quandl.com/api/v3/datasets/NASDAQOMX/NDX.json?api_key=Yb1WqRaFvoKardzS_a3V", function(nasdaq){
-    //     console.log(nasdaq);
-    // });
-// }); 

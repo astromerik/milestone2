@@ -23,7 +23,6 @@ function createChart(dates, stockprices, companyName) {
     if(chart){
         chart.destroy();
     }
-
     var ctx = document.getElementById('myChart');
     chart = new Chart(ctx, {
         type: 'line',
@@ -80,7 +79,8 @@ function searchStock(ticker, companyName) {
     getData(ticker, function (data) {
         data = data.dataset_data.data.reverse(); //Array is reversed in order for the graph to display correctly  
         
-        //pushes the specific arrays from the searchStock function to the arrays used in graph 
+        //pushes the specific arrays from the searchStock function to the arrays used in graph and stock information box.
+        
         lastDay.push(data[data.length - 1][0]);
         priceHigh.push(data[data.length - 1][2]);
         priceLow.push(data[data.length - 1][3]);
@@ -99,7 +99,7 @@ function searchStock(ticker, companyName) {
 }
 
 
-//Below is a array inserted with pairings of tickers and company names using the added ticker.json file --> Inspiration from Traversy Media @ youtube
+//Below is a array inserted with pairings of tickers and company names using the added ticker.json file
 
 
 let search = document.getElementById('search');
@@ -139,10 +139,10 @@ let outputHtml = function(matches) {
 };
 
 search.addEventListener('input', function() {
-    searchJSON(search.value)
+    searchJSON(search.value);
 });
 
-// gif shows when loading graph
+// gif shows when loading graph and stock-info-boxes appear when alternatives in list are being clicked
 
 $('#loader').hide();
 $('#info-box1').hide();
@@ -156,3 +156,4 @@ $('#match-list').click(function(){
     $('#info-box3').show();
     $('#info-box4').show();
 });
+

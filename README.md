@@ -52,24 +52,86 @@ The users goals are:
 #### Balsamiq mockups
 To view the initial wireframes for the application/website, click <a href="assets/Mockups/mockups.pdf" target="_blank">here</a>
 
+The wireframes display all the sections on the website, for both desktop and mobile view. The sections are:
+* Home section
+* Application section
+* About section
+* Contact section 
 
 ## Features
 
+#### Navigation bar and footer 
+
+The website contains a navbar on the top of the page which display the sites sections and the Success Tracker logo. The navbar collapses when the screen size is less than 992 pixels (tablet mode), only showing the logo and a hamburger menu. The navbar is not fixed, either on big or small screen sizes. This is because we do not want the navbar to take uncessary space. This is not a problem since the website is short in terms of sections and thus easy to navigate through even without the navbar. 
+When clicking the hamburger menu, the menu colappses and display the different sections which the user to click on to be directed to the section of choice. 
+The footer, on the bottom of the page, is kept as minimalistic as possible and only contains icons to the social platforms Success Tracker present on. 
+
 #### Home
+<img src="assets/images/demopic.png" alt="Erik logo"></a> 
+The home page displays icons with reasons why the visitor should start using Success Tracker. The statements are uses as a selling point and is currently not interactive. 
+The home page is kept clean to give the visitor the right impression (that the application is easy to use). On the bottom of the home page there is a button with the text "Get started today!" and when clicked it takes to user to the application section.
 
 #### Application
 
+The application section is where the user finds the application. The application (Success Tracker®) is the hart of the website. 
+On top of the section, the Success Tracker® logo is displayed. Below it, the actual application is hidden at first, only showing the message that describe what the user must do to run it. 
+The text box/search field is displayed under the application. When the user enters a letter they see a list with only the companies or tickers that matches the unput. The more letters the user put into the search field the more precise the search will be. 
+To start the application the user click on one of the options that is displayed. This activates the API and fetches the requested information based on the input. 
+During the loading time, the user is presented with a loading gif-file so the user understands that a process is running. When the process is completed a graph displays the stock price history. When the user hover the mouse over the black line on the graph (highest stock price of the day) a box pops up and displays the date and price. Beneath the graph, the user will be presented with the last day of trading, the highest price of the day, the lowest price of the day and the closing price. 
+If the user want to search for a new stock, the user simply delets the text in the input field and search for a new stock/company. They will now see that the list will be uppdated as expected and the filtering process continues as previously (when adding more text). 
+
 #### About
+
+The about section start with a short message regarding who built the application and whom its aimed towards. It is also describing the application in a short sentence. 
+Below the text a presentation (for now fictional) of the current highest performing users is displayed. It shows a highlight of the best perfomers portfoilos over the last week, 3 months and year. 
+This is again, a marketing tactic to show that the application is for thoes who wants to succeed with their investments. 
 
 #### Contact
 
+The contact section contains a FAQ part and a contact information part. 
+The FAQ part contains a drop down menu with the most frequently asked questions. When a question is being clicked, the answer is displayed below it. 
+To the right of the FAQ section, the user finds the contact information (email, phone number and opening hours). 
+
 ### Exisiting features
+
+* Header logotype - When clicked, the user is directed to the home section
+* Navigation bar - when clicked on one of the options, the user is directed to the selected section
+* Hamburger menu - when clicked, a dropdown display the navigation bar content and the process is the same as above
+* Search field for companies/stocks - list displaying companies/stocks that filters depending on the users input
+* Graph - graph that displays the fetched stock prices and dates from the api. Based on user input
+* Stock information - Beneath the graph, stock information is presented, which is fetched from api and based on user input. 
+* 
+
+### Feauters left to implement
 
 ## Technologies used
 
-Data to match the tickers and company names are gathered from nasdaqdata.com 
+* The website was built using HTML5 and CSS3 
+* JavaScript was used to build an interactive webpage and to connect to an API
+* An API from [Quandl](https://www.quandl.com/databases/WIKIP/documentation) was used to fetch stock data. 
+* To create a JSON-file, matching company names and tickers, data from [nasdaqdata](https://nasdaqdata.com) were used. 
+* To display the stock data in a timeline (graph) format, [ChartJS](https://www.chartjs.org/) were used. 
+* The website as built and developed using [GitPod](https://www.gitpod.io/) as IDE.
+* Icons was collected using [FontAwesome](https://fontawesome.com/start).
+* The fonts used on the website was collected through [Google Fonts](https://fonts.google.com/).
+* The logotype was created using [LogoMakr](https://logomakr.com).
+* [W3C's HTLM Validator](https://validator.w3.org/) were used to validate the websites HTML code. 
+* [W3C's CSS Validator](https://validator.w3.org/) were used to validate the websites CSS code. 
+* [JSHint](https://jshint.com/) were used to validate the websites JavaScript code. 
+
 
 ## Testing
+
+### IMPORTANT! 
+
+There are two current issues with the applications that are well known and will be focused on in the near future. These two are: 
+* Companies/stocks that shows as an example but do not exist in the API - This is because the API itself did not provide any company names (only 3 000+ tickers). To display the company names for the user, a separate list needed to be created. 
+The problem is that the API have no information regarding what lists/indexes the tickers can be found, thus the developer decided to take the 4 000 biggest companies/listed stocks in the US and create a JSON file from this. Therefore, the user can find companies/stocks that cannot be displayed since it cannot be found in the APi. 
+The JSON-file will be updated moving forward. 
+
+* The user is not notified about above problem and only sees the loading gif - As of today, there is no error message displaying when the user send a request for a company that do not exist in the api. This will be the main focus to develop in the next stage. 
+
+For a in depth walkthrough of the testing done on the website see [Testing.md](#) 
 
 ## Deployment
 

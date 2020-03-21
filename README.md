@@ -67,7 +67,7 @@ When clicking the hamburger menu, the menu colappses and display the different s
 The footer, on the bottom of the page, is kept as minimalistic as possible and only contains icons to the social platforms Success Tracker present on. 
 
 #### Home
-<img src="assets/images/demopic.png" alt="Erik logo"></a> 
+<img src="assets/images/demopic.png" alt="Demonstration picture"></a> 
 The home page displays icons with reasons why the visitor should start using Success Tracker. The statements are uses as a selling point and is currently not interactive. 
 The home page is kept clean to give the visitor the right impression (that the application is easy to use). On the bottom of the home page there is a button with the text "Get started today!" and when clicked it takes to user to the application section.
 
@@ -94,20 +94,27 @@ To the right of the FAQ section, the user finds the contact information (email, 
 
 ### Exisiting features
 
-* Header logotype - When clicked, the user is directed to the home section
-* Navigation bar - when clicked on one of the options, the user is directed to the selected section
-* Hamburger menu - when clicked, a dropdown display the navigation bar content and the process is the same as above
-* Search field for companies/stocks - list displaying companies/stocks that filters depending on the users input
-* Graph - graph that displays the fetched stock prices and dates from the api. Based on user input
+* Navigation bar - When clicked on one of the options, the user is directed to the selected section
+* Hamburger menu - When clicked, a dropdown display the navigation bar content and the process is the same as above
+* Search field for companies/stocks - List displaying companies/stocks that filters depending on the users input
+* Graph - Graph that displays the fetched stock prices and dates from the api. Based on user input. Users can hover mouse over grapph to get information about the specific date/price.
 * Stock information - Beneath the graph, stock information is presented, which is fetched from api and based on user input. 
-* 
+* FAQ boxes - Drop down functionality for FAQ boxes. 
 
 ### Feauters left to implement
+* A error message for the user if they search for a company which does not exist in the api. 
+* Updated the list which matches the search field and the api. 
+* For the application to be more comprehensive, a larger api will be used. This is needed to be able to display P/E-value, Market Cap, compare to industries and indexes etc. Also, if real time prices is wanted a better API is needed. 
+* Login page for users to save their history.
+* Forum for users to discuss shares. 
+* Notification functionality so that users can trach their stocks without actually using the application. (email sent when stock hit a price etc.)
 
 ## Technologies used
 
-* The website was built using HTML5 and CSS3 
-* JavaScript was used to build an interactive webpage and to connect to an API
+* The website was built using HTML5 and CSS3. 
+* JavaScript was used to build an interactive webpage and to connect to an API.
+* [jQuery](https://jquery.com/) was use to make DOM manipulation easier.
+* To make the structure and the site responsive in a simple manner [Bootstrap](https://getbootstrap.com/) were used.
 * An API from [Quandl](https://www.quandl.com/databases/WIKIP/documentation) was used to fetch stock data. 
 * To create a JSON-file, matching company names and tickers, data from [nasdaqdata](https://nasdaqdata.com) were used. 
 * To display the stock data in a timeline (graph) format, [ChartJS](https://www.chartjs.org/) were used. 
@@ -115,14 +122,13 @@ To the right of the FAQ section, the user finds the contact information (email, 
 * Icons was collected using [FontAwesome](https://fontawesome.com/start).
 * The fonts used on the website was collected through [Google Fonts](https://fonts.google.com/).
 * The logotype was created using [LogoMakr](https://logomakr.com).
+* To design the "section breakers" on the page [vectr](https://vectr.com/) were used.
 * [W3C's HTLM Validator](https://validator.w3.org/) were used to validate the websites HTML code. 
 * [W3C's CSS Validator](https://validator.w3.org/) were used to validate the websites CSS code. 
 * [JSHint](https://jshint.com/) were used to validate the websites JavaScript code. 
 
 
 ## Testing
-
-### IMPORTANT! 
 
 There are two current issues with the applications that are well known and will be focused on in the near future. These two are: 
 * Companies/stocks that shows as an example but do not exist in the API - This is because the API itself did not provide any company names (only 3 000+ tickers). To display the company names for the user, a separate list needed to be created. 
@@ -135,12 +141,29 @@ For a in depth walkthrough of the testing done on the website see [Testing.md](#
 
 ## Deployment
 
+As mentioned, [GitPod](https://www.gitpod.io/) was used as IDE when developing this application. Throug out the development, the project was commited to the git and continuously pushed to GitHub. 
+The following steps were taken to deploy the application:
+1. Log into my GitHub user. 
+2. Chosing the repository "Milestone2"
+3. When entering the repository, clicking "Settings" which is found on the top right. 
+4. When entering "Settings", scroll down to Github pages section and change "Source" to "Master Branch".
+5. Reload the page and scroll down to the same section - click the link and... Voila! The page is deployed. 
+
 ## Credits
 
 ### Content 
+* My girlfriend, Marie-Sofie Persson, gave input on the page layout and design.  
 
 ### Media
+* All images used in the webpage was collected from [Pixabay](https://pixabay.com) and especially from the artist [Manuchi](https://pixabay.com/users/manuchi-1728328/)
+* Icons was collected using [FontAwesome](https://fontawesome.com/start).
+* The logotype was created using [LogoMakr](https://logomakr.com).
+* To design the "section breakers" on the page [vectr](https://vectr.com/) were used.
+* To display the stock data in a timeline (graph) format, [ChartJS](https://www.chartjs.org/) were used. 
 
 ### Code
+* Inspiration for the filtering process and search functionality in the application was gathered from [Traversy_Media](https://www.youtube.com/user/TechGuyWeb) on Youtube.
 
 ### Acknowledgements
+* A big thank you to my tutors at Code Institute for helping me along the way. 
+* Also a big thank you to my mentor Brian Macharia for all great feedback and for taking the time to help me(even during a friday night). 

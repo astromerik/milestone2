@@ -27,6 +27,10 @@ h2, h3 {
     font-weight: 100;
 }
 
+h4 {
+    font-weight: 100;
+}
+
 h5 {
     color: ivory;
     font-weight: 100;
@@ -144,6 +148,7 @@ p {
 }
 
 /* Application page */
+
 #app-container {
     background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
     padding-top: 40px;
@@ -171,17 +176,38 @@ p {
     margin-bottom: 20px;
 }
 
+.info-row {
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
 .stock-info {
-    margin-top: 110px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .stock-info{
+        margin-top: 0;
+    }
 }
 
 .info-box {
     width: 90%;
-    height: 100px;
+    height: 80px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto; 
     text-align: center;
+}
+
+@media (max-width:767px){
+    .info-box {
+
+    }
+}
+
+.info-box h6 span {
+    border-bottom: 1px solid black;
 }
 
 .search-function {
@@ -208,6 +234,8 @@ p {
 .search-card {
     background-color: transparent;
     border: 2px solid black;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 
@@ -224,7 +252,6 @@ p {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    
 }
 
 /* About section */
@@ -235,9 +262,12 @@ p {
     background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
 }
 
-/* #about-container h2 {
-    margin-top: 120px;
-} */
+#about-container h4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 100;
+}
 
 #about-container i {
     margin-right: 20px;
@@ -255,8 +285,12 @@ p {
     text-align: center;
 }
 
-.card-deck {
-    margin-bottom: 100px;
+.card-body {
+    text-align: center;
+}
+
+.text-muted {
+    color: black !important;
 }
 
 .portfolio-card{
@@ -266,31 +300,32 @@ p {
 }
 
 .portfolio-card h5 {
-    color: black;
+    color: ivory;
 }
 
 /* FAQ section */
 
 #faq-container {
     background-image:linear-gradient(to left bottom, rgba(73, 220, 216), rgba(74,86,222));
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 160px;
 }
 
-/* #faq-container h2 {
-    padding-top: 120px;
-} */
+#faq-container h4 {
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 100;
+}
 
 .accordion .card{
     background-color: transparent;
 }
 
-#faq-container {
-    padding-bottom: 50px; 
-}
-
 #faq-container p {
     text-align: center;
+}
+
+.faq-boxes {
+    margin-bottom: 50px;
 }
 
 .btn-link {
@@ -304,11 +339,15 @@ p {
 .contact-info h5 {
     color: black;
     text-align: center;
-    margin-top: 30px;
+    padding-bottom: 15px;
 }
 
 /* Footer */
 
 footer {
-    background-image:linear-gradient(to left top, rgba(73, 220, 216), rgba(74,86,222));
+    padding-top: 50px;
+}
+
+footer i {
+    color: black;
 }

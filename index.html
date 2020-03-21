@@ -50,38 +50,32 @@
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="fas fa-chart-line fa-3x"></i>
 				<h5>Track your favourite stocks</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Never miss an opportunity again! <br>Success Tracker makes it easy to follow your favourite stocks.</p>
 			</div>
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="fas fa-network-wired fa-3x"></i>
 				<h5>Real time prices</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Tired of applications that have latency issues? <br>Our robust API always provide real time prices.</p>
 			</div>
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="far fa-laugh-beam fa-3x"></i>
 				<h5>Relax while making money</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Investments should be easy. <br>Success Tracker handles the hard work while you do what you love.</p>
 			</div>
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="fab fa-creative-commons-nc fa-3x"></i>
 				<h5>100% free</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Your money should stay yours! <br>We do not charge our users, Success Tracker is a NGO.</p>
 			</div>
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="far fa-comments fa-3x"></i>
 				<h5>Large community</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Need to discuss potential trades? <br>Join our large community to see what other investors think.</p>
 			</div>
 			<div class="col-6 col-md-4 home-info-box">
 				<i class="fas fa-globe-europe fa-3x"></i>
 				<h5>Supported world wide</h5>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eveniet, molestias facere
-					blanditiis molestiae</p>
+				<p>Hong Kong, London or New York? <br>It does not matter where you are, Success Tracker is available around the globe.</p>
 			</div>
 		</div>
 		<div class="get-started">
@@ -107,27 +101,35 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 canvas-chart searchText">
-                    <canvas id="myChart"></canvas>
+                <canvas id="myChart"></canvas>
                 <img src="assets/images/loader.gif" id="loader" alt="loading">
             </div>
-            <div class="col-12 col-md-3 stock-info">
-                <div class="info-box">
-                    <h6 id="info-box1">Last day of trading</h6>
-                    <p id="date"></p>
+        </div>
+            <div class="row info-row">
+                <div class="col-6 col-md-3 stock-info">
+                    <div class="info-box">
+                        <h6 id="info-box1"><span>Last day of trading</span></h6>
+                        <p id="date"></p>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-3 stock-info">
+                    <div class="info-box">
+                        <h6 id="info-box2"><span>Day high</span></h6>
+                        <p id="highest-price"></p>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-3 stock-info">
+                    <div class="info-box">
+                    <h6 id="info-box3"><span>Day low</span></h6>
+                        <p id="lowest-price"></p>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-3 stock-info">
+                    <div class="info-box">
+                        <h6 id="info-box4"><span>Day close</span></h6>
+                        <p id="closing-price"></p>
+                    </div>
                 </div>
-                <div class="info-box">
-                    <h6 id="info-box2">Highest Price</h6>
-                    <p id="highest-price"></p>
-                </div>
-                <div class="info-box">
-                <h6 id="info-box3">Lowest Price</h6>
-                    <p id="lowest-price"></p>
-                </div>
-                <div class="info-box">
-                    <h6 id="info-box4">Closing Price</h6>
-                    <p id="closing-price"></p>
-                </div>
-            </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 search-function">
@@ -160,23 +162,23 @@
         </div>
 
         <!--Cards with other users portfolios-->
-        <h3>Top preformers using Success Tracker®</h3>
+        <h4>Top preformers using Success Tracker®</h4>
         <div class="row card-deck justify-content-around">
             <div class="card portfolio-card col-8 col-md-12"> 
                 <img src="assets/images/deer.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">DeerTrader</h5>
-                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
+                    <p class="card-text">Portfolio: +124% <br> Bull: Alphabet C +32%
                     <br> Bear: Lehman Brothers B -100% </p>
-                    <p class="card-text"><small class="text-muted">Since 2020-01-01</small></p>
+                    <p class="card-text"><small class="text-muted">Last year</small></p>
                 </div>
             </div>
             <div class="card portfolio-card col-8 col-xl-6">
                 <img src="assets/images/owl.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">OwlMoneyMaker</h5>
-                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
-                    <br> Bear: Lehman Brothers B -100% </p>
+                    <p class="card-text">Portfolio: +67% <br> Bull: Facebook C +92%
+                    <br> Bear: Nordic Mines B -92% </p>
                     <p class="card-text"><small class="text-muted">Last three months</small></p>
                 </div>
             </div>
@@ -184,9 +186,9 @@
                 <img src="assets/images/eagle.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">BullishEagle</h5>
-                    <p class="card-text">Portfolio: +54% <br> Bull: Alphabet C +32%
-                    <br> Bear: Lehman Brothers B -100% </p>
-                    <p class="card-text"><small class="text-muted">Last year</small></p>
+                    <p class="card-text">Portfolio: +32% <br> Bull: HSBC B +43%
+                    <br> Bear: Astra Zeneca B -2% </p>
+                    <p class="card-text"><small class="text-muted">Last week</small></p>
                 </div>
             </div>
         </div>
@@ -197,10 +199,10 @@
 						<!-- FAQ & Contact section-->
 
     <div class="container-fluid" id="faq-container">
-        <h2>Contact us!</h2>
+        <h2>Contact</h2>
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h3>FAQ</h3>
+            <div class="col-12 col-md-6 faq-boxes">
+                <h4>FAQ</h4>
                 <div class="accordion" id="accordionExample">
                     <div class="card">
                         <div class="card-header" id="headingOne">
@@ -213,33 +215,7 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
                             <div class="card-body">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-								terry
-								richardson ad squid.
-								3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-								Food
-								truck
-								quinoa
-								nesciunt
-								laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-								on it
-								squid
-								single-origin
-								coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-								craft
-								beer
-								labore wes
-								anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-								butcher
-								vice
-								lomo.
-								Leggings
-								occaecat craft beer farm-to-table, raw denim aesthetic synth
-								nesciunt
-								you
-								probably
-								haven't heard
-								of them accusamus labore sustainable VHS.
+								When you log in, you can acces your notificiation settings. Make sure that notifications are set to ON. If you still does not receive notifications, please contact us using the contact information below. 
                             </div>
                         </div>
                     </div>
@@ -254,33 +230,7 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                terry
-                                richardson ad squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                Food
-                                truck
-                                quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
-                                squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                craft
-                                beer
-                                labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                butcher
-                                vice
-                                lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you
-                                probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
+                                If you cannot acces your account, send an email to info@successtracker.com and we will return a link for you to change your login credentials. 
                             </div>
                         </div>
                     </div>
@@ -288,102 +238,49 @@
                         <div class="card-header" id="headingThree">
                             <p class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                I wish to add a commodity but I cannot find it, why?
+                                I wish to add a stock but I cannot find it, why?
                                 </button>
                             </p>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                             data-parent="#accordionExample">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                terry
-                                richardson ad squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                Food
-                                truck
-                                quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
-                                squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                craft
-                                beer
-                                labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                butcher
-                                vice
-                                lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you
-                                probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <p class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                                How do I turn of my notifications?
-                                </button>
-                            </p>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                terry
-                                richardson ad squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                Food
-                                truck
-                                quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
-                                squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                craft
-                                beer
-                                labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                butcher
-                                vice
-                                lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt
-                                you
-                                probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
+                               Our API is currently only showing information for S&P 500 stocks. Our API is beeing developed and will show more stocks and indexes in the near future.  
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 contact-info">
-                <h3>Contact us!</h3>
+                <h4>Contact information</h4>
                 <h5>Email: info@successtracker.com</h5>
                 <h5>Phone number: 555 - 534 57 53</h5>
                 <h5>Opening hours: 08:30 - 17:00 Mon-Fri</h5>
             </div>
         </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-around">
+                        <a class="twitter" target="_blank" href="https://twitter.com">
+                            <i class="fab fa-twitter fa-2x"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a class="instagram" target="_blank" href="https://instagram.com">
+                            <i class="fab fa-instagram fa-2x"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a class="facebook" target="_blank" href="https://facebook.com">
+                            <i class="fab fa-facebook-square fa-2x"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-        <div class="row">
-            <div class="col-md-12">
-                <i class="fab fa-twitter fa-2x"></i>
-            </div>
-        </div>
-    </footer>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

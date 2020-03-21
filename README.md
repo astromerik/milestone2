@@ -61,19 +61,19 @@ The wireframes display all the sections on the website, for both desktop and mob
 ## Features
 
 #### Navigation bar and footer 
-
+<img src="assets/images/navbardemo.png" alt="Demonstration picture">
 The website contains a navbar on the top of the page which display the sites sections and the Success Tracker logo. The navbar collapses when the screen size is less than 992 pixels (tablet mode), only showing the logo and a hamburger menu. 
 The navbar is not fixed, either on big or small screen sizes. This is because we do not want the navbar to take uncessary space. This is not a problem since the website is short in terms of sections and thus easy to navigate through even without the navbar. However, in order to make the site as user friendly as possible, this option will be considered again shortly. 
 When clicking the hamburger menu, the menu colappses and display the different sections which the user to click on to be directed to the section of choice. 
 The footer, on the bottom of the page, is kept as minimalistic as possible and only contains icons to the social platforms Success Tracker present on. 
 
 #### Home
-<img src="assets/images/demopic.png" alt="Demonstration picture"></a> 
+<img src="assets/images/demopic.png" alt="Demonstration picture"> 
 The home page displays icons with reasons why the visitor should start using Success Tracker. The statements are uses as a selling point and is currently not interactive. 
 The home page is kept clean to give the visitor the right impression (that the application is easy to use). On the bottom of the home page there is a button with the text "Get started today!" and when clicked it takes to user to the application section.
 
 #### Application
-
+<img src="assets/images/applicationdemo.png" alt="Demonstration picture">
 The application section is where the user finds the application. The application (Success Tracker®) is the hart of the website. 
 On top of the section, the Success Tracker® logo is displayed. Below it, the actual application is hidden at first, only showing the message that describe what the user must do to run it. 
 The text box/search field is displayed under the application. When the user enters a letter they see a list with only the companies or tickers that matches the unput. The more letters the user put into the search field the more precise the search will be. 
@@ -82,13 +82,13 @@ During the loading time, the user is presented with a loading gif-file so the us
 If the user want to search for a new stock, the user simply delets the text in the input field and search for a new stock/company. They will now see that the list will be uppdated as expected and the filtering process continues as previously (when adding more text). 
 
 #### About
-
+<img src="assets/images/aboutdemo.png" alt="Demonstration picture">
 The about section start with a short message regarding who built the application and whom its aimed towards. It is also describing the application in a short sentence. 
 Below the text a presentation (for now fictional) of the current highest performing users is displayed. It shows a highlight of the best perfomers portfoilos over the last week, 3 months and year. 
 This is again, a marketing tactic to show that the application is for thoes who wants to succeed with their investments. 
 
 #### Contact
-
+<img src="assets/images/contactdemo.png" alt="Demonstration picture">
 The contact section contains a FAQ part and a contact information part. 
 The FAQ part contains a drop down menu with the most frequently asked questions. When a question is being clicked, the answer is displayed below it. 
 To the right of the FAQ section, the user finds the contact information (email, phone number and opening hours). 

@@ -1,4 +1,4 @@
-// connection to the api and JSON parse data 
+// Connection to the api and JSON parse data. 
 
 const ENDPOINT = "https://www.quandl.com/api/v3/datasets/WIKI/";
 const KEY = "/data.json?api_key=Yb1WqRaFvoKardzS_a3V";
@@ -16,7 +16,8 @@ function getData(ticker, cb) {
     xhr.send();
 }
 
-// Below is the displayed chart - from Chart.js
+// Below is the displayed chart which draws the chard depending on the data it gets from the API (based on user input)
+// The chart is gathered from the library "Chart.js" 
 
 var chart;
 function createChart(dates, stockprices, companyName) {
@@ -67,7 +68,7 @@ function createChart(dates, stockprices, companyName) {
     $('#loader').hide();
 }
 
-// search function and loop to get the stock price and date for a specific stock from API (user input)
+// Search function and loop to get the stock price and date for a specific stock from API (user input)
 
 function searchStock(ticker, companyName) {
     let dates = [];
@@ -79,7 +80,8 @@ function searchStock(ticker, companyName) {
     getData(ticker, function (data) {
         data = data.dataset_data.data.reverse(); //Array is reversed in order for the graph to display correctly  
         
-        //pushes the specific arrays from the searchStock function to the arrays used in graph and stock information box.
+        //Pushes the specific arrays from the function to the arrays used in graph and stock information box.
+        // For dates and stockprices we grab all the historic data in order to display a graph. For the other prices we only take the prices for the last day.
         
         lastDay.push(data[data.length - 1][0]);
         priceHigh.push(data[data.length - 1][2]);
@@ -90,6 +92,9 @@ function searchStock(ticker, companyName) {
             dates.push(item[0]);
             stockprices.push(item[4]);
         });
+
+        // Use the above variables to be used in the "createChart" function or display it or display it on html (website) in regular text.
+
         createChart(dates, stockprices, companyName);
         $('#highest-price').text(priceHigh);
         $('#lowest-price').text(priceLow);
@@ -99,7 +104,7 @@ function searchStock(ticker, companyName) {
 }
 
 
-//Below is a array inserted with pairings of tickers and company names using the added ticker.json file
+//Below is a array inserted with pairings of tickers and company names using the added data/ticker.json file
 
 
 let search = document.getElementById('search');
@@ -117,6 +122,8 @@ let matches = ticker.filter(function (stock) {
     let regex = new RegExp(`^${searchText}`, 'gi');
     return stock.company.match(regex) || stock.ticker.match(regex);
 });
+
+// Clear the list if the user delets or have a empty search box 
 
 if(searchText.length === 0) {
         matches = [];

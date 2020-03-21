@@ -200,12 +200,6 @@ p {
     text-align: center;
 }
 
-@media (max-width:767px){
-    .info-box {
-
-    }
-}
-
 .info-box h6 span {
     border-bottom: 1px solid black;
 }
@@ -271,14 +265,6 @@ p {
 
 #about-container i {
     margin-right: 20px;
-}
-
-#about-container .checks p {
-    padding-top: 5px;
-}
-
-.checks {
-    padding-left: 7%;
 }
 
 .about-text {

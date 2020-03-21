@@ -62,7 +62,8 @@ The wireframes display all the sections on the website, for both desktop and mob
 
 #### Navigation bar and footer 
 
-The website contains a navbar on the top of the page which display the sites sections and the Success Tracker logo. The navbar collapses when the screen size is less than 992 pixels (tablet mode), only showing the logo and a hamburger menu. The navbar is not fixed, either on big or small screen sizes. This is because we do not want the navbar to take uncessary space. This is not a problem since the website is short in terms of sections and thus easy to navigate through even without the navbar. 
+The website contains a navbar on the top of the page which display the sites sections and the Success Tracker logo. The navbar collapses when the screen size is less than 992 pixels (tablet mode), only showing the logo and a hamburger menu. 
+The navbar is not fixed, either on big or small screen sizes. This is because we do not want the navbar to take uncessary space. This is not a problem since the website is short in terms of sections and thus easy to navigate through even without the navbar. However, in order to make the site as user friendly as possible, this option will be considered again shortly. 
 When clicking the hamburger menu, the menu colappses and display the different sections which the user to click on to be directed to the section of choice. 
 The footer, on the bottom of the page, is kept as minimalistic as possible and only contains icons to the social platforms Success Tracker present on. 
 

@@ -1,11 +1,11 @@
 <h1 align="center">
 
-<a href="https://astromerik.github.io/milestone2/" target="_blank"> <img src="assets/images/logo.png" alt="Erik logo"></a>  
+<a href="https://astromerik.github.io/success-tracker/" target="_blank"> <img src="assets/images/logo.png" alt="Erik logo"></a>  
 </h1>
 
 <div align="center">
 
-[View this website on GitHub Pages](https://astromerik.github.io/milestone2/) 
+[View this website on GitHub Pages](https://astromerik.github.io/success-tracker/) 
 </div>
 
 Success Tracker is an application for investors. The web application is presented on a single page website which includes a home section, application section, about section and a contact/faq section. 
